@@ -18,10 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: ['Outfit', 'system-ui', 'sans-serif'],
-				display: ['Space Grotesk', 'system-ui', 'sans-serif'],
-			},
+		fontFamily: {
+			sans: ['Inter', 'system-ui', 'sans-serif'],
+			display: ['Playfair Display', 'Georgia', 'serif'],
+		},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

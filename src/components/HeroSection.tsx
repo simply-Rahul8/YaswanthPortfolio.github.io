@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -9,229 +8,125 @@ const HeroSection = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.7 },
     },
   };
 
-  const expertise = [
-    'Full-Stack Development',
-    'AI & ML Engineering',
-    'Cloud Architecture',
-    'System Design',
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            y: [-10, 10, -10],
-            rotate: [-2, 2, -2],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute top-20 left-[10%] w-72 h-72 bg-primary/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            y: [10, -10, 10],
-            rotate: [2, -2, 2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute top-1/3 right-[5%] w-96 h-96 bg-secondary/15 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            y: [-5, 15, -5],
-            rotate: [-1, 1, -1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="absolute bottom-20 left-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
-        />
-        
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:60px_60px] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Subtle grid lines */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] bg-[size:80px_80px] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)]" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-5xl mx-auto"
-        >
-          {/* Greeting & Name */}
-          <motion.div variants={itemVariants} className="mb-6 flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              Open to opportunities in Sweden
-            </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium">
-              <MapPin className="w-4 h-4" />
-              Open to relocation
-            </span>
-          </motion.div>
-
-          <motion.h1 
-            variants={itemVariants}
-            className="heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6"
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-screen pt-20 pb-12">
+          
+          {/* Left Content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="relative z-10 flex flex-col justify-center"
           >
-            Hi, I'm{' '}
-            <span className="text-gradient">Yaswanth Rahul</span>
-          </motion.h1>
-
-          <motion.h2 
-            variants={itemVariants}
-            className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium mb-8"
-          >
-            <span className="text-primary">Full-Stack</span> &{' '}
-            <span className="text-secondary">AI Engineer</span>
-          </motion.h2>
-
-          {/* Story Intro */}
-          <motion.div variants={itemVariants} className="max-w-3xl mb-10">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I build systems end-to-end — from{' '}
-              <span className="text-foreground font-medium">clean, thoughtful user interfaces</span> to{' '}
-              <span className="text-foreground font-medium">scalable backend services</span> and{' '}
-              <span className="text-foreground font-medium">intelligent AI decision layers</span>.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
-              I didn't arrive at AI by chasing trends — I came here through engineering. 
-              Certified in AI & Analytics from <span className="text-foreground font-medium">IIT Roorkee</span>, 
-              what motivates me is solving problems where technology genuinely helps people 
-              understand complex things or work more effectively.
-            </p>
-          </motion.div>
-
-          {/* Expertise Tags */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-10">
-            {expertise.map((skill, index) => (
-              <motion.span
-                key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                className="px-4 py-2 bg-card border rounded-full text-sm font-medium text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </motion.div>
-
-          {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
-            <Button size="lg" className="group" asChild>
-              <a href="#projects">
-                View My Work
-                <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="mailto:yashwanthrahul5126@gmail.com">
-                <Mail className="mr-2 h-4 w-4" />
-                Get In Touch
-              </a>
-            </Button>
-          </motion.div>
-
-          {/* Location & Social */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-6 text-muted-foreground">
-            <span className="flex items-center gap-2 text-sm">
-              <MapPin className="w-4 h-4 text-primary" />
-              Karlskrona, Sweden
-            </span>
-            <div className="flex items-center gap-3">
-              <a
-                href="https://github.com/simply-Rahul8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 hover:bg-primary/10 rounded-full transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/ry-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 hover:bg-primary/10 rounded-full transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Stats Row */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto"
-        >
-          {[
-            { number: '3+', label: 'Years Experience' },
-            { number: '30+', label: 'Projects Delivered' },
-            { number: '93%', label: 'ML Accuracy (Thesis)' },
-            { number: '5', label: 'Team Members Led' },
-          ].map((stat, index) => (
+            {/* Vertical label */}
             <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.4 + index * 0.1 }}
-              className="text-center p-4 bg-card/60 backdrop-blur-sm rounded-xl border hover:border-primary/50 transition-colors"
+              variants={itemVariants}
+              className="hidden lg:block absolute -left-16 top-1/2 -translate-y-1/2"
             >
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                {stat.number}
+              <span className="vertical-text text-xs tracking-[0.3em] uppercase text-muted-foreground font-medium">
+                Full-Stack & AI Engineer
+              </span>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div variants={itemVariants} className="flex gap-12 mb-12">
+              <div>
+                <span className="text-3xl md:text-4xl font-light text-foreground">+30</span>
+                <p className="text-xs text-muted-foreground mt-1 tracking-wide">Projects delivered</p>
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">
-                {stat.label}
+              <div>
+                <span className="text-3xl md:text-4xl font-light text-foreground">+3</span>
+                <p className="text-xs text-muted-foreground mt-1 tracking-wide">Years experience</p>
               </div>
             </motion.div>
-          ))}
-        </motion.div>
+
+            {/* Main Heading */}
+            <motion.h1
+              variants={itemVariants}
+              className="heading-display text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] text-foreground mb-6"
+            >
+              Hello
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              variants={itemVariants}
+              className="text-base md:text-lg text-muted-foreground max-w-md"
+            >
+              — It's Yaswanth Rahul, a Full-Stack & AI Engineer.
+              <br />
+              <span className="text-sm">
+                Certified in AI & Analytics from IIT Roorkee.
+              </span>
+            </motion.p>
+
+            {/* Year label - bottom left */}
+            <motion.div
+              variants={itemVariants}
+              className="mt-16 hidden lg:block"
+            >
+              <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground">2025</span>
+            </motion.div>
+          </motion.div>
+
+          {/* Right - Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="relative flex items-center justify-center lg:justify-end"
+          >
+            <div className="relative w-72 h-[28rem] sm:w-80 sm:h-[32rem] md:w-[24rem] md:h-[36rem] lg:w-[28rem] lg:h-[40rem]">
+              <img
+                src="/RY Profile image.png"
+                alt="Yaswanth Rahul"
+                className="w-full h-full object-cover object-top rounded-sm grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              {/* Subtle overlay on bottom */}
+              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background/60 to-transparent" />
+            </div>
+          </motion.div>
+        </div>
 
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="flex justify-center mt-12"
+          transition={{ delay: 1.8 }}
+          className="absolute bottom-8 left-6 lg:left-12"
         >
           <a
             href="#about"
-            className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
+            className="inline-flex items-center gap-2 text-xs tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors"
           >
-            <span className="text-xs mb-2">Scroll to explore</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
+            Scroll down
+            <motion.span
+              animate={{ y: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <ArrowDown className="w-5 h-5" />
-            </motion.div>
+              <ArrowDown className="w-3 h-3" />
+            </motion.span>
           </a>
         </motion.div>
       </div>
