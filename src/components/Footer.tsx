@@ -50,8 +50,6 @@ const Footer = () => {
           {/* Copyright & Back to Top */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              <span>Built with</span>
-              <Heart className="h-4 w-4 text-accent" />
               <span>© 2025</span>
             </div>
             <Button
