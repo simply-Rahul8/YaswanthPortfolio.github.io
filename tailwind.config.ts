@@ -28,6 +28,9 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'sidebar-bg': 'hsl(var(--sidebar-bg))',
+				'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
+				'sidebar-muted': 'hsl(var(--sidebar-muted))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',

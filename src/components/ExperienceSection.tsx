@@ -10,56 +10,51 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: 'Fullstack & AI Developer Intern',
+      title: 'Full Stack & AI Developer Intern',
       company: 'Gaddr',
       location: 'Sweden',
-      period: 'March 2025 - Present',
+      period: 'Mar 2025 - Apr 2026',
+      type: 'Internship',
+      duration: 'Current',
+      isCurrent: true,
       achievements: [
-        'Led 5-member team developing 30+ consumer-facing applications',
-        'Mentored junior interns, improving team productivity by 20%',
-        'Reduced deployment time by 15% through CI/CD optimization',
-        'Presented technical demos to stakeholders and CEO'
+        'Led a 5-engineer team delivering 30+ consumer-facing web applications using Angular, Node.js, and PostgreSQL',
+        'Engineered AI assistant infrastructure with LangChain and OpenAI API, growing active users to 100+',
+        'Mentored 5 junior engineers, improving overall team velocity by 20%',
+        'Optimized AWS and Azure CI/CD pipelines, cutting deployment time by 15%',
+        'Presented technical demos to stakeholders, aligning engineering deliverables with end-user needs'
       ],
-      technologies: ['Angular', 'React', 'Python', 'Azure', 'LangChain', 'OpenAI API']
+      technologies: ['Angular', 'Node.js', 'PostgreSQL', 'LangChain', 'OpenAI', 'AWS', 'Azure']
     },
     {
-      title: 'Freelance Full Stack Developer',
-      company: 'Remote',
-      location: 'Global',
-      period: '2022 - 2024',
+      title: 'Freelance Full Stack Engineer',
+      company: 'Independent Clients (B2B/DTC)',
+      location: 'India',
+      period: 'Jul 2022 - Jun 2024',
+      type: 'Freelance',
+      duration: '2 years',
       achievements: [
-        '100% client satisfaction across all projects',
-        'Delivered projects with 1-3 week rapid iteration cycles',
-        'Built 5+ Angular-based projects with real-time features',
-        'Reduced technical debt by 20% through refactoring'
+        'Delivered 5+ end-to-end software products with 100% client satisfaction rate',
+        'Architected a real-time task management system with RBAC, JWT auth, and WebSocket updates',
+        'Developed a Kotlin-based mobile app with GPS-driven personalization and offline caching',
+        'Reduced codebase technical debt by 20% through systematic refactoring and SaaS design patterns',
+        'Integrated OpenWeatherMap and other third-party APIs for data-enriched user experiences'
       ],
-      technologies: ['Angular', 'ASP.NET Core', 'C#', 'SQL Server', 'SignalR']
-    },
-    {
-      title: 'Software Engineer (Java) – Virtual Experience',
-      company: 'JP Morgan Chase & Co. (Forage)',
-      location: 'Virtual',
-      period: '2025',
-      achievements: [
-        'Built Java 17 & Spring Boot backend for high-volume transaction processing',
-        'Integrated Apache Kafka for async, event-driven scalable workflows',
-        'Implemented Spring Data JPA with H2, enforcing transactional consistency',
-        'Exposed REST APIs with clean controller–service architecture'
-      ],
-      technologies: ['Java 17', 'Spring Boot', 'Apache Kafka', 'Spring Data JPA', 'Maven'],
-      credential: 'pu8iTnsQJgRMyL69W'
+      technologies: ['Angular', '.NET Core', 'SQL Server', 'Kotlin', 'JWT', 'REST APIs']
     },
     {
       title: 'Cloud Computing Intern',
       company: 'HDLC Info Technologies',
-      location: 'India',
-      period: 'May 2023 - July 2023',
+      location: 'Hyderabad, India',
+      period: 'May 2023 - Jun 2023',
+      type: 'Internship',
+      duration: '2 months',
       achievements: [
-        'Executed 50+ cloud operations using AWS',
-        'Automated infrastructure via CI/CD pipelines',
-        'Improved DevOps efficiency by 10%'
+        'Executed 50+ cloud operations across AWS EC2, S3, and CloudWatch services',
+        'Automated CI/CD workflows with GitHub Actions, improving deployment efficiency by 10%',
+        'Collaborated with cross-functional teams to deliver cloud-native application features'
       ],
-      technologies: ['AWS', 'EC2', 'S3', 'GitHub Actions', 'GCP']
+      technologies: ['AWS EC2', 'S3', 'CloudWatch', 'GitHub Actions', 'Docker']
     }
   ];
 
@@ -122,47 +117,44 @@ const ExperienceSection = () => {
                 >
                   <Card className="hover:border-primary/50 transition-all duration-300">
                     <CardContent className="p-5">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <h4 className="font-semibold text-foreground">{exp.title}</h4>
-                          <p className="text-sm text-primary font-medium">{exp.company}</p>
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          {exp.isCurrent ? (
+                            <Badge className="bg-accent/15 text-accent border-accent/30 hover:bg-accent/20 text-[10px] uppercase tracking-wider">
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent mr-1.5 animate-pulse" />
+                              Current
+                            </Badge>
+                          ) : null}
+                          <span className="text-xs text-muted-foreground">
+                            {exp.type}{exp.duration ? ` · ${exp.duration}` : ''}
+                          </span>
                         </div>
-                        {'credential' in exp && (exp as any).credential && (
-                          <Badge variant="outline" className="text-xs shrink-0">
-                            ID: {(exp as any).credential}
-                          </Badge>
-                        )}
-                      </div>
-                      
-                      <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
+                        <Badge variant="outline" className="text-[10px] font-mono shrink-0">
                           {exp.period}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          {exp.location}
-                        </span>
+                        </Badge>
                       </div>
 
-                      <ul className="space-y-1 mb-3">
-                        {exp.achievements.slice(0, 3).map((achievement, i) => (
+                      <h4 className="font-semibold text-foreground text-lg mb-1">{exp.title}</h4>
+                      <p className="text-sm mb-3">
+                        <span className="text-primary font-medium">{exp.company}</span>
+                        <span className="text-muted-foreground"> · {exp.location}</span>
+                      </p>
+
+                      <ul className="space-y-1.5 mb-3">
+                        {exp.achievements.map((achievement, i) => (
                           <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
+                            <span className="text-primary mt-0.5">▸</span>
                             {achievement}
                           </li>
                         ))}
                       </ul>
 
-                      <div className="flex flex-wrap gap-1">
-                        {exp.technologies.slice(0, 4).map((tech) => (
-                          <span key={tech} className="text-xs bg-muted px-2 py-0.5 rounded text-muted-foreground">
+                      <div className="flex flex-wrap gap-1.5">
+                        {exp.technologies.map((tech) => (
+                          <span key={tech} className="text-[10px] font-mono px-2 py-1 rounded border border-primary/30 text-primary bg-primary/5">
                             {tech}
                           </span>
                         ))}
-                        {exp.technologies.length > 4 && (
-                          <span className="text-xs text-muted-foreground">+{exp.technologies.length - 4}</span>
-                        )}
                       </div>
                     </CardContent>
                   </Card>

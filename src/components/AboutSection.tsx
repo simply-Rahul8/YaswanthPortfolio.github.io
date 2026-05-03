@@ -82,9 +82,10 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  My work lives at the intersection of <span className="text-primary font-medium">software engineering</span>, 
-                  <span className="text-secondary font-medium"> cloud platforms</span>, and 
-                  <span className="text-accent font-medium"> applied AI</span>. I started by building full-stack applications, 
+                  I'm a <span className="text-foreground font-semibold">junior-level developer with 2+ years of hands-on experience</span> working
+                  at the intersection of <span className="text-primary font-medium">software engineering</span>,
+                  <span className="text-secondary font-medium"> cloud platforms</span>, and
+                  <span className="text-accent font-medium"> applied AI</span>. I started by building full-stack applications,
                   deploying systems on AWS, Azure, and GCP.
                 </p>
                 

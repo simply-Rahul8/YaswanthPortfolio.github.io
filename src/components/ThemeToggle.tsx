@@ -1,5 +1,4 @@
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ThemeProvider';
 
 export function ThemeToggle() {
@@ -10,15 +9,19 @@ export function ThemeToggle() {
   };
 
   return (
-    <Button
-      variant="outline"
-      size="sm"
+    <button
       onClick={toggleTheme}
-      className="h-9 w-9 p-0"
+      className="relative w-12 h-6 rounded-full transition-colors duration-300"
+      style={{ background: 'hsl(var(--sidebar-muted) / 0.3)' }}
+      aria-label="Toggle theme"
     >
-      <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+      <span
+        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full flex items-center justify-center transition-transform duration-300 bg-primary"
+        style={{ transform: theme === 'dark' ? 'translateX(24px)' : 'translateX(0)' }}
+      >
+        <Sun className="h-3 w-3 text-primary-foreground rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 absolute" />
+        <Moon className="h-3 w-3 text-primary-foreground rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 absolute" />
+      </span>
+    </button>
   );
 }

@@ -11,6 +11,15 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: 'India-Quant-Virtual-SME-Assistant',
+      description: 'MCP server connecting Claude Desktop to live Indian stock market data via NSE & yfinance APIs — 10 tools covering live prices, options chains, Black-Scholes Greeks, technical signals, news sentiment, and paper trading.',
+      category: 'AI/Finance',
+      icon: Brain,
+      highlights: ['10 MCP tools', 'Local & free data', 'Paper trading'],
+      technologies: ['Python', 'FastMCP', 'SQLite', 'yfinance', 'NSE APIs'],
+      githubUrl: 'https://github.com/simply-Rahul8/India-Quant-Virtual-SME-Assistant.git'
+    },
+    {
       title: 'Customer Feedback Analysis Tool',
       description: 'Hybrid rule-based + AI system for low-latency (<500ms) sentiment analysis and topic extraction.',
       category: 'AI/Generative AI',
