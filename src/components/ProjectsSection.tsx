@@ -17,7 +17,8 @@ const ProjectsSection = () => {
       icon: Brain,
       highlights: ['Two-call LLM', 'MMR + FAISS', 'Recall@10 tested'],
       technologies: ['Python', 'LangChain', 'FAISS', 'MiniLM', 'Pydantic', 'RAG'],
-      githubUrl: 'https://github.com/simply-Rahul8/shl-recommender-agent'
+      githubUrl: 'https://github.com/simply-Rahul8/shl-recommender-agent',
+      demoUrl: 'https://shl-recommender-agent-production.up.railway.app/'
     },
     {
       title: '3D Pose Estimation & Fatigue Detection',
@@ -156,8 +157,8 @@ const ProjectsSection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.05, duration: 0.4 }}
               >
-                <Card className="h-full group hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-5">
+                <Card className="h-full flex flex-col group hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-5 flex flex-col flex-1">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-3">
                       <div className={`p-2 rounded-lg bg-${categoryColor}/10`}>
@@ -169,15 +170,15 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Title & Description */}
-                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors text-sm">
+                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors text-sm line-clamp-2 min-h-[2.5rem]">
                       {project.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+                    <p className="text-xs text-muted-foreground mb-3 leading-relaxed line-clamp-3 min-h-[3.6rem]">
                       {project.description}
                     </p>
 
                     {/* Highlights */}
-                    <div className="flex flex-wrap gap-1 mb-3">
+                    <div className="flex flex-wrap gap-1 mb-3 min-h-[1.5rem]">
                       {project.highlights.slice(0, 2).map((highlight) => (
                         <Badge key={highlight} className={`text-xs px-2 py-0 bg-${categoryColor}/10 text-${categoryColor} border-0`}>
                           {highlight}
@@ -186,7 +187,7 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-1 mb-4">
+                    <div className="flex flex-wrap gap-1 mb-4 min-h-[1.5rem]">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span key={tech} className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded">
                           {tech}
@@ -198,7 +199,7 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Actions */}
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 mt-auto">
                       <Button variant="outline" size="sm" className="flex-1 h-8 text-xs" asChild>
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="h-3 w-3 mr-1" />
