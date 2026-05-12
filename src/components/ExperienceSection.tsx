@@ -10,37 +10,52 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: 'Full Stack & AI Developer Intern',
+      title: 'Full Stack AI Developer Intern',
       company: 'Gaddr',
       location: 'Sweden',
       period: 'Mar 2025 - Apr 2026',
       type: 'Internship',
-      duration: 'Current',
-      isCurrent: true,
+      duration: '13 months',
+      isCurrent: false,
       achievements: [
-        'Led a 5-engineer team delivering 30+ consumer-facing web applications using Angular, Node.js, and PostgreSQL',
-        'Engineered AI assistant infrastructure with LangChain and OpenAI API, growing active users to 100+',
-        'Mentored 5 junior engineers, improving overall team velocity by 20%',
-        'Optimized AWS and Azure CI/CD pipelines, cutting deployment time by 15%',
-        'Presented technical demos to stakeholders, aligning engineering deliverables with end-user needs'
+        'Engineered AI agents and RAG pipelines using Python, LangChain, OpenAI API, and PostgreSQL',
+        'Reduced manual data retrieval by 40% for 100+ active users',
+        'Extended CI/CD pipelines with code quality gates and static analysis',
+        'Introduced Git branching conventions that reduced integration conflicts',
+        'Mentored junior developers, boosting team productivity by 20%',
+        'Presented architecture decisions directly to the CEO'
       ],
-      technologies: ['Angular', 'Node.js', 'PostgreSQL', 'LangChain', 'OpenAI', 'AWS', 'Azure']
+      technologies: ['Python', 'LangChain', 'OpenAI', 'PostgreSQL', 'AWS', 'Azure', 'CI/CD']
     },
     {
-      title: 'Freelance Full Stack Engineer',
-      company: 'Independent Clients (B2B/DTC)',
-      location: 'India',
-      period: 'Jul 2022 - Jun 2024',
+      title: 'Freelance Full Stack Developer',
+      company: 'Independent Clients',
+      location: 'Remote',
+      period: '2022 - 2024',
       type: 'Freelance',
       duration: '2 years',
       achievements: [
-        'Delivered 5+ end-to-end software products with 100% client satisfaction rate',
-        'Architected a real-time task management system with RBAC, JWT auth, and WebSocket updates',
-        'Developed a Kotlin-based mobile app with GPS-driven personalization and offline caching',
-        'Reduced codebase technical debt by 20% through systematic refactoring and SaaS design patterns',
-        'Integrated OpenWeatherMap and other third-party APIs for data-enriched user experiences'
+        'Shipped TaskFlow SaaS app (Python/Node.js backend, Angular frontend, SQL Server, JWT auth) serving 200+ users',
+        'Architected modular, scalable systems with RBAC and real-time updates',
+        'Achieved 100% client satisfaction across freelance engagements',
+        'Reduced codebase technical debt by 20% through systematic refactoring',
+        'Integrated third-party APIs for data-enriched user experiences'
       ],
-      technologies: ['Angular', '.NET Core', 'SQL Server', 'Kotlin', 'JWT', 'REST APIs']
+      technologies: ['Angular', 'Node.js', '.NET Core', 'SQL Server', 'JWT', 'REST APIs']
+    },
+    {
+      title: 'Software Engineering Virtual Experience',
+      company: 'JPMorgan Chase & Co.',
+      location: 'Remote',
+      period: '2023',
+      type: 'Virtual Mentorship',
+      duration: 'Program',
+      achievements: [
+        'Completed JPMorgan virtual internship/mentorship in software engineering',
+        'Built financial data processing tasks aligned with real engineering workflows',
+        'Strengthened backend architecture and data handling fundamentals'
+      ],
+      technologies: ['Java', 'Python', 'Financial Systems', 'Data Processing']
     },
     {
       title: 'Cloud Computing Intern',
@@ -52,7 +67,7 @@ const ExperienceSection = () => {
       achievements: [
         'Executed 50+ cloud operations across AWS EC2, S3, and CloudWatch services',
         'Automated CI/CD workflows with GitHub Actions, improving deployment efficiency by 10%',
-        'Collaborated with cross-functional teams to deliver cloud-native application features'
+        'Collaborated with cross-functional teams to deliver cloud-native features'
       ],
       technologies: ['AWS EC2', 'S3', 'CloudWatch', 'GitHub Actions', 'Docker']
     }
@@ -60,11 +75,11 @@ const ExperienceSection = () => {
 
   const education = [
     {
-      degree: 'B.Tech Computer Science (Exchange)',
-      institution: 'Blekinge Institute of Technology',
-      location: 'Sweden',
+      degree: "Bachelor's in Computer Science",
+      institution: 'Blekinge Institute of Technology (BTH)',
+      location: 'Karlskrona, Sweden',
       period: '2024 - 2025',
-      focus: 'Full-Stack, Cloud, Generative AI'
+      focus: 'Full-Stack, Cloud, Generative AI, Applied Machine Learning'
     },
     {
       degree: 'B.Tech Computer Science',

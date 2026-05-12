@@ -82,28 +82,29 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I'm a <span className="text-foreground font-semibold">junior-level developer with 2+ years of hands-on experience</span> working
-                  at the intersection of <span className="text-primary font-medium">software engineering</span>,
-                  <span className="text-secondary font-medium"> cloud platforms</span>, and
-                  <span className="text-accent font-medium"> applied AI</span>. I started by building full-stack applications,
-                  deploying systems on AWS, Azure, and GCP.
-                </p>
-                
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  Over time, I became most interested not just in using tools, but in understanding 
-                  <strong className="text-foreground"> how systems behave under real constraints</strong>—scale, 
-                  latency, security, and maintainability. That curiosity naturally led me into AI engineering.
+                  I'm a <span className="text-foreground font-semibold">junior-level Full-Stack & AI Engineer with 2+ years of hands-on experience</span> who
+                  enjoys building systems end to end — from clean, thoughtful user interfaces, all the way down to
+                  <span className="text-secondary font-medium"> scalable backend services</span> and
+                  <span className="text-accent font-medium"> intelligent, AI-driven decision layers</span>.
+                  My work lives at the intersection of software engineering, cloud platforms, machine learning, and applied AI.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  For my thesis, I built a <strong className="text-foreground">3D pose estimation system for fatigue detection</strong> using 
-                  smartphone-based motion data—achieving <span className="text-primary font-semibold">93% accuracy</span> with a practical, 
-                  low-cost approach. That project shaped how I think about applied ML: research that solves real problems and can actually be used.
+                  I didn't arrive at AI by chasing trends — I came here through engineering. I started by building full-stack applications
+                  with <strong className="text-foreground">React, Angular, .NET, and Python</strong>, deploying systems on AWS, Azure, and GCP.
+                  Over time, I became most interested in understanding <strong className="text-foreground">how systems behave under real constraints</strong>:
+                  scale, latency, security, and maintainability.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  What drives me: <strong className="text-foreground">designing intelligent systems that people can trust</strong>. 
-                  Products where AI decisions matter, where backend reliability matters, and where good engineering directly shapes user experience.
+                  For my thesis, I built a <strong className="text-foreground">3D pose estimation system for fatigue detection</strong> using
+                  smartphone-based motion data — achieving <span className="text-primary font-semibold">93% accuracy</span> with a practical,
+                  low-cost approach using MMPose HRNet, SemGCN, and BiLSTM.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  Today I actively experiment with <strong className="text-foreground">prompt engineering, Retrieval-Augmented Generation,
+                  and multi-LLM orchestration</strong> — focusing on reliability, explainability, and reducing hallucinations in production systems.
                 </p>
               </div>
 

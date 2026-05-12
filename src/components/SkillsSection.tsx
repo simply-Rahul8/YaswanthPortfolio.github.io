@@ -7,24 +7,35 @@ import { Button } from '@/components/ui/button';
 const SkillsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [activeCategory, setActiveCategory] = useState('ai');
+  const [activeCategory, setActiveCategory] = useState('languages');
 
   const skillCategories = {
+    languages: {
+      title: 'Languages',
+      icon: Code,
+      skills: [
+        'Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go', 'Rust', 'Kotlin', 'MATLAB', 'SQL'
+      ]
+    },
     ai: {
       title: 'AI & ML',
       icon: Brain,
       skills: [
-        'Generative AI Development',
+        'LangChain',
+        'OpenAI API',
+        'HuggingFace',
+        'RAG Pipelines',
+        'LLMs (Ollama / Llama 3)',
         'Prompt Engineering',
-        'RAG Implementation',
-        'LangChain Framework',
-        'OpenAI API Integration',
-        'Hybrid AI Architectures',
-        'Sentiment Analysis',
-        'NLP & Text Processing',
-        'TensorFlow/Keras',
         'Multi-LLM Orchestration',
-        'AI Agent Building',
+        'AI Agents (MCP)',
+        'TensorFlow / Keras',
+        'PyTorch',
+        'BiLSTM & Conv1D',
+        'YOLO (v8/v9/v10/v11)',
+        'Vision Transformers (ViT)',
+        'FAISS',
+        'MiniLM Embeddings',
         'MMPose & SemGCN'
       ]
     },
@@ -32,38 +43,30 @@ const SkillsSection = () => {
       title: 'Frontend',
       icon: Code,
       skills: [
-        'React.js',
-        'Angular (2+)',
-        'Next.js',
-        'TypeScript',
-        'React Native',
-        'Vue.js',
-        'JavaScript (ES6+)',
-        'HTML5 & CSS3',
-        'Tailwind CSS'
+        'React.js', 'Next.js', 'Angular', 'Vue.js', 'React Native',
+        'TypeScript', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Tailwind CSS'
       ]
     },
     backend: {
       title: 'Backend',
       icon: Database,
       skills: [
-        'C# / .NET Core',
-        'ASP.NET Core',
-        'Node.js',
-        'Python',
-        'REST APIs',
-        'Entity Framework',
-        'PostgreSQL',
-        'SQL Server',
-        'MongoDB',
-        'Firebase'
+        'Node.js', '.NET Core / ASP.NET', 'Spring Boot', 'Flask', 'FastAPI', 'Express.js',
+        'REST APIs', 'gRPC', 'JWT Auth', 'Entity Framework'
+      ]
+    },
+    databases: {
+      title: 'Databases',
+      icon: Database,
+      skills: [
+        'PostgreSQL', 'MongoDB', 'SQL Server', 'Firebase', 'Supabase', 'SQLite'
       ]
     },
     cloud: {
       title: 'Cloud & DevOps',
       icon: Cloud,
       skills: [
-        'AWS (EC2, S3, Lambda)',
+        'AWS (EC2, S3, Lambda, CloudWatch)',
         'Azure',
         'Google Cloud Platform',
         'Docker',
@@ -80,12 +83,12 @@ const SkillsSection = () => {
       skills: [
         'System Design',
         'Low-Latency Systems',
-        'Agile Methodologies',
-        'Test-Driven Development',
+        'Agile / TDD',
         'Git Version Control',
         'API Documentation',
         'Code Review',
-        'Technical Leadership'
+        'Technical Leadership',
+        'Deepgram API'
       ]
     }
   };

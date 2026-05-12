@@ -11,95 +11,113 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: 'India-Quant-Virtual-SME-Assistant',
-      description: 'MCP server connecting Claude Desktop to live Indian stock market data via NSE & yfinance APIs — 10 tools covering live prices, options chains, Black-Scholes Greeks, technical signals, news sentiment, and paper trading.',
-      category: 'AI/Finance',
+      title: 'SHL Assessment Recommender',
+      description: 'LLM-agent recommender that helps recruiters pick the right SHL assessments. Two-call LLM pipeline (intent classification + grounded recommendations), MMR reranking over a FAISS cosine index on all-MiniLM-L6-v2 embeddings, pre-filters for technical/coding terms, and SHL grid + JSON API scraping for high-fidelity metadata. Hallucinations reduced via strict Pydantic schemas, "no internal knowledge" prompting, and a behavioral test suite covering prompt injection, schema compliance, and Recall@10.',
+      category: 'AI/LLM',
       icon: Brain,
-      highlights: ['10 MCP tools', 'Local & free data', 'Paper trading'],
-      technologies: ['Python', 'FastMCP', 'SQLite', 'yfinance', 'NSE APIs'],
-      githubUrl: 'https://github.com/simply-Rahul8/India-Quant-Virtual-SME-Assistant.git'
+      highlights: ['Two-call LLM', 'MMR + FAISS', 'Recall@10 tested'],
+      technologies: ['Python', 'LangChain', 'FAISS', 'MiniLM', 'Pydantic', 'RAG'],
+      githubUrl: 'https://github.com/simply-Rahul8/shl-recommender-agent'
+    },
+    {
+      title: '3D Pose Estimation & Fatigue Detection',
+      description: "Bachelor's thesis (Grade B, 93% accuracy) using MMPose HRNet + SemGCN + BiLSTM on smartphone-based motion data.",
+      category: 'Research/ML',
+      icon: Brain,
+      highlights: ['93% accuracy', 'Thesis · Grade B', 'Smartphone-based'],
+      technologies: ['Python', 'MMPose', 'SemGCN', 'BiLSTM', 'TensorFlow'],
+      githubUrl: 'https://github.com/simply-Rahul8/3D-pose-estimation'
+    },
+    {
+      title: 'Dual-LLM RAG Insight Engine',
+      description: 'Multi-LLM orchestration pipeline using Ollama, LangChain, and Streamlit for enhanced reasoning and grounded responses.',
+      category: 'AI/LLM',
+      icon: Brain,
+      highlights: ['Multi-LLM', 'RAG', 'Streamlit UI'],
+      technologies: ['Python', 'LangChain', 'Ollama', 'Streamlit'],
+      githubUrl: 'https://github.com/simply-Rahul8/Dual-LLM-RAG-based-Pipeline'
     },
     {
       title: 'Customer Feedback Analysis Tool',
-      description: 'Hybrid rule-based + AI system for low-latency (<500ms) sentiment analysis and topic extraction.',
-      category: 'AI/Generative AI',
+      description: 'Hybrid LLM + rule-based system for low-latency sentiment analysis and topic extraction.',
+      category: 'AI/NLP',
       icon: Brain,
-      highlights: ['<500ms latency', 'Fault-tolerant', 'Scalable hybrid architecture'],
-      technologies: ['Python', 'AI/LLM APIs', 'Rule Engine', 'REST APIs', 'Caching'],
-      githubUrl: 'https://github.com/simply-Rahul8/Customer-Feedback-Analysis-Tool.git'
+      highlights: ['<500ms latency', 'Hybrid AI', 'NLP'],
+      technologies: ['Python', 'LLM APIs', 'Rule Engine', 'REST APIs'],
+      githubUrl: 'https://github.com/simply-Rahul8/Customer-Feedback-Analysis-Tool'
     },
     {
-      title: 'TaskFlow - Task Management System',
-      description: 'Full-stack web app serving 200+ users with role-based access and real-time tracking.',
+      title: 'TaskFlow SaaS App',
+      description: 'Full-stack SaaS task manager serving 200+ users — ASP.NET Core backend, Angular/React frontend, SQL Server, JWT auth.',
       category: 'Full-Stack',
       icon: Zap,
-      highlights: ['200+ users', '100% client satisfaction', 'Real-time features'],
-      technologies: ['C#', '.NET Core', 'Angular', 'SQL Server', 'JWT'],
-      githubUrl: 'https://github.com/simply-Rahul8/TAskFlow.git',
+      highlights: ['200+ users', 'JWT Auth', 'SaaS'],
+      technologies: ['.NET Core', 'Angular', 'TypeScript', 'SQL Server'],
+      githubUrl: 'https://github.com/simply-Rahul8/TAskFlow',
       demoUrl: 'https://taskflow-dev.netlify.app/'
     },
     {
-      title: 'Personal Data Chatbot (RAG)',
-      description: 'Privacy-preserving chatbot with Retrieval-Augmented Generation for secure document querying.',
-      category: 'AI/ML',
-      icon: Brain,
-      highlights: ['Privacy-first', 'Local infrastructure', 'RAG technology'],
-      technologies: ['Python', 'LangChain', 'Ollama', 'FAISS', 'Streamlit'],
-      githubUrl: 'https://github.com/simply-Rahul8/Personal-chatbot.git'
-    },
-    {
-      title: '3D Pose Estimation - Fatigue Detection',
-      description: 'Bachelor\'s thesis achieving 93% accuracy using smartphone-based motion data and ML.',
-      category: 'Research/ML',
-      icon: Brain,
-      highlights: ['93% accuracy', 'Smartphone-based', 'Academic research'],
-      technologies: ['Python', 'TensorFlow', 'MMPose', 'SemGCN', 'OpenCV'],
-      githubUrl: 'https://github.com/simply-Rahul8/3D-pose-estimation.git'
-    },
-    {
-      title: 'Dual-LLM Insight Engine',
-      description: 'AI chatbot with RAG implementation using multiple language models for enhanced responses.',
-      category: 'AI/ML',
-      icon: Brain,
-      highlights: ['Multi-LLM', 'RAG implementation', 'Robust architecture'],
-      technologies: ['Python', 'LangChain', 'Ollama', 'PostgreSQL'],
-      githubUrl: 'https://github.com/simply-Rahul8/Dual-LLM-RAG-based-Pipeline.git'
-    },
-    {
-      title: 'GamePlan App',
-      description: 'React Native mobile app with GPS-based attendance tracking serving 200+ users.',
-      category: 'Mobile/Team Lead',
-      icon: Users,
-      highlights: ['5-person team lead', 'Cross-platform', 'Real-time sync'],
-      technologies: ['React Native', 'Firebase', 'Jest', 'Cypress'],
-      githubUrl: 'https://github.com/simply-Rahul8/GamePlanApp.git'
-    },
-    {
-      title: 'Intelligent Medical Consent Flow',
-      description: 'AI-powered system that streamlines medical consent with speech tech and NLP.',
-      category: 'AI/Healthcare',
-      icon: Brain,
-      highlights: ['Accessibility', 'Privacy-first', 'Voice-enabled'],
-      technologies: ['Python', 'Streamlit', 'Perplexity AI', 'Whisper STT'],
-      githubUrl: 'https://github.com/simply-Rahul8/Intelligent-medical-Assista.git'
-    },
-    {
       title: 'Microservices Food Ordering System',
-      description: 'Enterprise-grade microservices with Docker, Kubernetes, and API Gateway.',
+      description: 'Enterprise-grade microservices architecture using C#/.NET Core, Docker, Kubernetes, gRPC and REST.',
       category: 'Cloud/Backend',
       icon: Cloud,
-      highlights: ['Microservices', 'Kubernetes', 'API Gateway'],
-      technologies: ['.NET Core', 'Docker', 'Kubernetes', 'gRPC'],
-      githubUrl: 'https://github.com/simply-Rahul8/Micro-services-Ordering-system.git'
+      highlights: ['Microservices', 'Kubernetes', 'gRPC + REST'],
+      technologies: ['C#', '.NET Core', 'Docker', 'Kubernetes', 'gRPC'],
+      githubUrl: 'https://github.com/simply-Rahul8/Micro-services-Ordering-system'
     },
     {
-      title: 'Grayscale Image Processor',
-      description: 'Serverless AWS Lambda application for event-driven image processing.',
+      title: 'GamePlan Mobile App',
+      description: 'Cross-platform React Native app with Firebase realtime sync and a Spring Boot backend.',
+      category: 'Mobile',
+      icon: Users,
+      highlights: ['React Native', 'Firebase', 'Spring Boot'],
+      technologies: ['React Native', 'JavaScript', 'Firebase', 'Spring Boot'],
+      githubUrl: 'https://github.com/simply-Rahul8/GamePlanApp'
+    },
+    {
+      title: 'Personal Data RAG Chatbot',
+      description: 'Privacy-first chatbot with local RAG using Streamlit, Ollama, LangChain and FAISS local vector store.',
+      category: 'AI/LLM',
+      icon: Brain,
+      highlights: ['Privacy-first', 'Local LLM', 'FAISS'],
+      technologies: ['Python', 'LangChain', 'Ollama', 'FAISS', 'Streamlit'],
+      githubUrl: 'https://github.com/simply-Rahul8/Personal-chatbot'
+    },
+    {
+      title: 'Voice Notes App',
+      description: 'Voice-to-text notes application built with JavaScript and Node.js with real-time transcription.',
+      category: 'Voice AI',
+      icon: Brain,
+      highlights: ['Voice AI', 'Speech-to-Text', 'Realtime'],
+      technologies: ['JavaScript', 'Node.js', 'Voice APIs'],
+      githubUrl: 'https://github.com/simply-Rahul8/Voice--Notes-APP'
+    },
+    {
+      title: 'AWS Grayscale Image Processor',
+      description: 'Event-driven serverless image processing pipeline using AWS Lambda and S3.',
       category: 'Cloud/Serverless',
       icon: Cloud,
-      highlights: ['Serverless', 'Cost-effective', 'Team lead'],
+      highlights: ['Serverless', 'AWS Lambda', 'Event-driven'],
       technologies: ['AWS Lambda', 'Python', 'S3', 'CloudWatch'],
-      githubUrl: 'https://github.com/simply-Rahul8/Grayscale-Image-Processor.git'
+      githubUrl: 'https://github.com/simply-Rahul8/Grayscale-Image-Processor'
+    },
+    {
+      title: 'Financial Backend Architecture',
+      description: 'Python-based backend system designed for financial data processing and modular service composition.',
+      category: 'Backend',
+      icon: Cloud,
+      highlights: ['Finance', 'Backend', 'Modular'],
+      technologies: ['Python', 'REST APIs', 'PostgreSQL'],
+      githubUrl: 'https://github.com/simply-Rahul8/Financial_Backend_Architecture'
+    },
+    {
+      title: 'COVID-19 Data Visualization Tool',
+      description: 'Interactive Streamlit visualization tool using Markov Chains for pandemic data trends.',
+      category: 'Data/Viz',
+      icon: Brain,
+      highlights: ['Markov Chains', 'Streamlit', 'Data Viz'],
+      technologies: ['Python', 'Streamlit', 'Pandas'],
+      githubUrl: 'https://github.com/simply-Rahul8/COVID-19-Data-Visualization-tool'
     }
   ];
 
@@ -211,7 +229,7 @@ const ProjectsSection = () => {
           className="mt-12 grid grid-cols-3 gap-4 max-w-2xl mx-auto"
         >
           {[
-            { number: '30+', label: 'Projects Delivered' },
+            { number: '15+', label: 'Projects Delivered' },
             { number: '500+', label: 'Users Served' },
             { number: '100%', label: 'Client Satisfaction' },
           ].map((stat) => (

@@ -15,7 +15,7 @@ const HeroSection = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   };
 
-  const techBadges = ['React', 'Angular', 'Python'];
+  const techBadges = ['React', 'Python', 'LangChain'];
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -34,6 +34,18 @@ const HeroSection = () => {
             animate="visible"
             className="relative z-10 flex flex-col justify-center"
           >
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-2 mb-4"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+              </span>
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+                Open to Work · Sweden / EU · Remote · Hybrid
+              </span>
+            </motion.div>
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground text-lg mb-4"
@@ -54,14 +66,14 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-lg font-medium text-foreground/80 mb-4"
             >
-              Full-Stack & AI Developer
+              Full-Stack & AI Developer · GenAI Enthusiast
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground max-w-md leading-relaxed mb-8"
             >
-              I design reliable, intelligent systems from scalable applications to applied machine learning.
+              I build systems end to end — from clean interfaces to scalable backends and intelligent, AI-driven decision layers.
             </motion.p>
 
             <motion.div variants={itemVariants}>
