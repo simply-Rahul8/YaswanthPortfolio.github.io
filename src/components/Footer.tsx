@@ -19,7 +19,7 @@ const Footer = () => {
             <span className="text-2xl font-bold heading-display text-foreground">RY.</span>
             <div className="text-sm text-muted-foreground">
               <p>Full-Stack & AI Developer</p>
-              <p>📍 Karlskrona, Sweden</p>
+              <p>📍 Hyderabad, Telangana</p>
             </div>
           </div>
 

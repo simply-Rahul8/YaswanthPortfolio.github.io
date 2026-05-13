@@ -258,13 +258,22 @@ const ExperienceSection = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-1 mb-4">
                       {['Python', 'TensorFlow', 'MMPose', 'SemGCN', 'OpenMMLab', 'Deep Learning'].map((tech) => (
                         <span key={tech} className="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded">
                           {tech}
                         </span>
                       ))}
                     </div>
+
+                    <a
+                      href="http://bth.diva-portal.org/smash/record.jsf?pid=diva2:1981297"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-black text-black bg-accent hover:bg-accent/90 px-3 py-1.5 rounded-md transition-colors"
+                    >
+                      📄 View Publication on DiVA →
+                    </a>
                   </CardContent>
                 </Card>
               </motion.div>

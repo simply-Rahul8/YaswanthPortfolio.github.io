@@ -15,7 +15,7 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: emailAddress, href: emailUrl, external: false },
-    { icon: MapPin, label: 'Location', value: 'Karlskrona, Sweden', href: '#', external: false },
+    { icon: MapPin, label: 'Location', value: 'Hyderabad, Telangana', href: '#', external: false },
     { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/yaswanthrahul', href: linkedInUrl, external: true },
     { icon: Github, label: 'GitHub', value: 'github.com/simply-Rahul8', href: githubUrl, external: true },
     { icon: MessageCircle, label: 'WhatsApp', value: '+91 75696 87249', href: whatsAppUrl, external: true },
