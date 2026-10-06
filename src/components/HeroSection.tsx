@@ -15,7 +15,7 @@ const HeroSection = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   };
 
-  const techBadges = ['React', 'Python', 'LangChain'];
+  const techBadges = ['Python', 'LangChain', 'LangGraph'];
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
-                Open to Work · Sweden / EU · Remote · Hybrid
+                Open to Work · Hyderabad, India · Remote · Hybrid
               </span>
             </motion.div>
             <motion.p
@@ -66,14 +66,14 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-lg font-medium text-foreground/80 mb-4"
             >
-              Full-Stack & AI Developer · GenAI Enthusiast
+              AI Developer · RAG Systems · Prompt, Context and Loop Engineering · Agentic AI
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground max-w-md leading-relaxed mb-8"
             >
-              I build systems end to end — from clean interfaces to scalable backends and intelligent, AI-driven decision layers.
+              I build AI agents, RAG systems, and multi-step agentic workflows that turn client requirements into reliable, production-ready solutions.
             </motion.p>
 
             <motion.div variants={itemVariants}>

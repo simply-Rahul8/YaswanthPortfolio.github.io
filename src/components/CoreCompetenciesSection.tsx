@@ -1,16 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Code, 
-  Brain, 
-  Cloud, 
-  Layers, 
-  Search, 
-  Users2, 
-  Cpu, 
-  Zap,
-  GitBranch
-} from 'lucide-react';
+import { Brain, Database, RefreshCw, Bot, Cpu, Cloud } from 'lucide-react';
 
 const CoreCompetenciesSection = () => {
   const ref = useRef(null);
@@ -18,49 +8,34 @@ const CoreCompetenciesSection = () => {
 
   const competencies = [
     {
-      icon: Code,
-      title: 'End-to-End Development',
-      description: 'Full-stack capability from React/Angular frontends to .NET/Python backends with clean architecture.',
+      icon: Database,
+      title: 'RAG Systems',
+      description: 'Semantic and hybrid search, query transformation, reranking, metadata filtering, Pinecone, FAISS, RAGAS.',
+    },
+    {
+      icon: RefreshCw,
+      title: 'Prompt, Context and Loop Engineering',
+      description: 'Prompt design, context management, iterative agent loops, LLM evaluation.',
+    },
+    {
+      icon: Bot,
+      title: 'Agentic AI',
+      description: 'AI agents, multi-step agentic workflows, multi-agent systems, stateful task routing, MCP.',
     },
     {
       icon: Brain,
-      title: 'AI & ML Engineering',
-      description: 'RAG systems, prompt engineering, multi-LLM orchestration, and production-ready AI pipelines.',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'AWS, Azure, GCP deployments with serverless, microservices, and container orchestration.',
-    },
-    {
-      icon: Layers,
-      title: 'System Design',
-      description: 'Designing for scale, latency, and reliability. Low-latency systems with fault-tolerant architectures.',
-    },
-    {
-      icon: Search,
-      title: 'Problem-Solving',
-      description: 'Systematic approach using research, data analysis, and iterative testing to validate solutions.',
-    },
-    {
-      icon: Users2,
-      title: 'Technical Leadership',
-      description: 'Led 5-member teams, mentored developers, and communicated complex ideas to stakeholders.',
+      title: 'LLM Frameworks and Platforms',
+      description: 'LangChain, LangGraph, OpenAI API, AWS Bedrock, Gemini, Groq.',
     },
     {
       icon: Cpu,
-      title: 'ML & Deep Learning',
-      description: 'TensorFlow, Keras, pose estimation, and classical ML with focus on robustness and validation.',
+      title: 'Machine Learning',
+      description: 'NLP, computer vision, TensorFlow, PyTorch, OpenMMLab.',
     },
     {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Sub-500ms latency systems, caching strategies, and efficient data processing pipelines.',
-    },
-    {
-      icon: GitBranch,
-      title: 'DevOps & CI/CD',
-      description: 'Docker, Kubernetes, GitHub Actions, and automated deployment pipelines.',
+      icon: Cloud,
+      title: 'Backend and Cloud',
+      description: 'Python, Node.js, Next.js, FastAPI, REST APIs, PostgreSQL, AWS, GCP, Docker, CI/CD.',
     },
   ];
 
@@ -77,7 +52,7 @@ const CoreCompetenciesSection = () => {
             Core <span className="text-gradient">Competencies</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Full-stack development meets AI engineering and cloud expertise
+            RAG, agentic AI, and prompt engineering backed by solid cloud and backend skills
           </p>
         </motion.div>
 
@@ -116,13 +91,13 @@ const CoreCompetenciesSection = () => {
           <div className="inline-flex flex-wrap justify-center gap-3 p-6 bg-muted/50 rounded-2xl border">
             <span className="text-muted-foreground text-sm">Seeking roles in:</span>
             <span className="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              Full-Stack Developer
+              AI Developer
             </span>
             <span className="px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-              AI/ML Engineer
+              AI Engineer
             </span>
             <span className="px-4 py-1.5 bg-accent/10 text-accent rounded-full text-sm font-medium">
-              Software Engineer
+              GenAI Engineer
             </span>
           </div>
         </motion.div>

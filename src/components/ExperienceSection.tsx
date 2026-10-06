@@ -10,52 +10,50 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: 'Full Stack AI Developer Intern',
+      title: 'AI Developer',
+      company: 'Tekworks',
+      location: 'Hyderabad, India',
+      period: 'Jun 2026 - Present',
+      type: 'Full-time',
+      duration: '',
+      isCurrent: true,
+      achievements: [
+        'Build client AI agents with system prompts, tool definitions, and agent loops that plan, act, evaluate, and refine',
+        'Design multi-step agentic workflows chaining LLM calls, tool use, and conditional routing to replace manual processes',
+        'Engineer client-specific prompts with prompt and context engineering to meet requirement acceptance criteria',
+        'Improve team productivity by automating traditional coding practices with AI-assisted development workflows'
+      ],
+      technologies: ['AI Agents', 'Prompt Engineering', 'Agentic Workflows', 'LLMs', 'Python']
+    },
+    {
+      title: 'Full Stack and AI Developer',
       company: 'Gaddr',
-      location: 'Sweden',
+      location: 'Remote, Sweden',
       period: 'Mar 2025 - Apr 2026',
-      type: 'Internship',
-      duration: '13 months',
+      type: 'Full-time',
+      duration: '14 months',
       isCurrent: false,
       achievements: [
-        'Engineered AI agents and RAG pipelines using Python, LangChain, OpenAI API, and PostgreSQL',
-        'Reduced manual data retrieval by 40% for 100+ active users',
-        'Extended CI/CD pipelines with code quality gates and static analysis',
-        'Introduced Git branching conventions that reduced integration conflicts',
-        'Mentored junior developers, boosting team productivity by 20%',
-        'Presented architecture decisions directly to the CEO'
+        'Delivered AI assistants to 50+ clients via RAG pipelines (LangChain, OpenAI API, vector search) for document Q&A',
+        'Prototyped a LangGraph stateful agent workflow, adding conditional branching for clarify, recommend, and refine intents',
+        'Led a 5-member team building Node.js, FastAPI, and PostgreSQL applications; mentored 5 interns (+20% productivity)',
+        'Reduced deployment time by 15% by containerizing AI applications with Docker and optimizing CI/CD pipelines on AWS'
       ],
-      technologies: ['Python', 'LangChain', 'OpenAI', 'PostgreSQL', 'AWS', 'Azure', 'CI/CD']
+      technologies: ['Python', 'LangChain', 'LangGraph', 'OpenAI', 'FastAPI', 'PostgreSQL', 'AWS', 'Docker']
     },
     {
-      title: 'Freelance Full Stack Developer',
-      company: 'Independent Clients',
-      location: 'Remote',
-      period: '2022 - 2024',
+      title: 'Full Stack Engineer',
+      company: 'Freelance',
+      location: 'India',
+      period: 'Jul 2022 - Jun 2024',
       type: 'Freelance',
       duration: '2 years',
+      isCurrent: false,
       achievements: [
-        'Shipped TaskFlow SaaS app (Python/Node.js backend, Angular frontend, SQL Server, JWT auth) serving 200+ users',
-        'Architected modular, scalable systems with RBAC and real-time updates',
-        'Achieved 100% client satisfaction across freelance engagements',
-        'Reduced codebase technical debt by 20% through systematic refactoring',
-        'Integrated third-party APIs for data-enriched user experiences'
+        'Delivered 5+ B2B and DTC software solutions, including a real-time task manager with RBAC and JWT authentication',
+        'Reduced technical debt by 20% through systematic refactoring and modern SaaS principles'
       ],
-      technologies: ['Angular', 'Node.js', '.NET Core', 'SQL Server', 'JWT', 'REST APIs']
-    },
-    {
-      title: 'Software Engineering Virtual Experience',
-      company: 'JPMorgan Chase & Co.',
-      location: 'Remote',
-      period: '2023',
-      type: 'Virtual Mentorship',
-      duration: 'Program',
-      achievements: [
-        'Completed JPMorgan virtual internship/mentorship in software engineering',
-        'Built financial data processing tasks aligned with real engineering workflows',
-        'Strengthened backend architecture and data handling fundamentals'
-      ],
-      technologies: ['Java', 'Python', 'Financial Systems', 'Data Processing']
+      technologies: ['Node.js', 'REST APIs', 'JWT', 'SQL']
     },
     {
       title: 'Cloud Computing Intern',
@@ -64,29 +62,33 @@ const ExperienceSection = () => {
       period: 'May 2023 - Jun 2023',
       type: 'Internship',
       duration: '2 months',
+      isCurrent: false,
       achievements: [
-        'Executed 50+ cloud operations across AWS EC2, S3, and CloudWatch services',
-        'Automated CI/CD workflows with GitHub Actions, improving deployment efficiency by 10%',
-        'Collaborated with cross-functional teams to deliver cloud-native features'
+        'Executed 50+ AWS operations (EC2, S3, CloudWatch) for production workloads',
+        'Improved deployment efficiency by 10% by automating CI/CD pipelines with GitHub Actions'
       ],
-      technologies: ['AWS EC2', 'S3', 'CloudWatch', 'GitHub Actions', 'Docker']
+      technologies: ['AWS EC2', 'S3', 'CloudWatch', 'GitHub Actions']
     }
   ];
 
   const education = [
     {
-      degree: "Bachelor's in Computer Science",
-      institution: 'Blekinge Institute of Technology (BTH)',
-      location: 'Karlskrona, Sweden',
-      period: '2024 - 2025',
-      focus: 'Full-Stack, Cloud, Generative AI, Applied Machine Learning'
+      degree: 'AI and Analytics (Distance Education)',
+      institution: 'Indian Institute of Technology (IIT) Roorkee',
+      location: 'India',
+      period: 'Ongoing'
     },
     {
-      degree: 'B.Tech Computer Science',
-      institution: 'JNTU',
+      degree: 'B.Tech, Computer Science',
+      institution: 'Blekinge Institute of Technology (BTH)',
+      location: 'Karlskrona, Sweden',
+      period: 'Sep 2024 - Jun 2025'
+    },
+    {
+      degree: 'B.Tech, Computer Science',
+      institution: 'Jawaharlal Nehru Technological University (JNTU), Kakinada',
       location: 'India',
-      period: '2021 - 2024',
-      focus: 'ML, Data Analytics, Software Development'
+      period: 'Dec 2021 - Aug 2024'
     }
   ];
 
@@ -215,8 +217,6 @@ const ExperienceSection = () => {
                           {edu.location}
                         </span>
                       </div>
-                      
-                      <p className="text-xs text-muted-foreground">{edu.focus}</p>
                     </CardContent>
                   </Card>
                 </motion.div>

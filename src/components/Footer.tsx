@@ -18,8 +18,8 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <span className="text-2xl font-bold heading-display text-foreground">RY.</span>
             <div className="text-sm text-muted-foreground">
-              <p>Full-Stack & AI Developer</p>
-              <p>📍 Hyderabad, Telangana</p>
+              <p>AI Developer</p>
+              <p>📍 Hyderabad, India</p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-sm text-muted-foreground">© 2025</span>
+            <span className="text-sm text-muted-foreground">© 2026</span>
             <Button variant="ghost" size="sm" onClick={scrollToTop} className="hover:bg-primary/10">
               <ArrowUp className="h-4 w-4" />
             </Button>

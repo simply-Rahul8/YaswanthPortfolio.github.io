@@ -1,94 +1,87 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Code, Database, Cloud, Brain, Settings } from 'lucide-react';
+import { Database, Cloud, Brain, Cpu, Bot, RefreshCw } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 const SkillsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [activeCategory, setActiveCategory] = useState('languages');
+  const [activeCategory, setActiveCategory] = useState('rag');
 
   const skillCategories = {
-    languages: {
-      title: 'Languages',
-      icon: Code,
+    rag: {
+      title: 'RAG Systems',
+      icon: Database,
       skills: [
-        'Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go', 'Rust', 'Kotlin', 'MATLAB', 'SQL'
+        'Semantic Chunking',
+        'Hybrid Search',
+        'Query Transformation',
+        'Reranking',
+        'Metadata Filtering',
+        'Pinecone',
+        'FAISS',
+        'RAGAS'
       ]
     },
-    ai: {
-      title: 'AI & ML',
+    prompt: {
+      title: 'Prompt, Context and Loop Engineering',
+      icon: RefreshCw,
+      skills: [
+        'Prompt Design',
+        'Context Management',
+        'Iterative Agent Loops',
+        'LLM Evaluation'
+      ]
+    },
+    agentic: {
+      title: 'Agentic AI',
+      icon: Bot,
+      skills: [
+        'AI Agents',
+        'Multi-Step Agentic Workflows',
+        'Multi-Agent Systems',
+        'Stateful Task Routing',
+        'MCP'
+      ]
+    },
+    frameworks: {
+      title: 'LLM Frameworks',
       icon: Brain,
       skills: [
         'LangChain',
+        'LangGraph',
         'OpenAI API',
-        'HuggingFace',
-        'RAG Pipelines',
-        'LLMs (Ollama / Llama 3)',
-        'Prompt Engineering',
-        'Multi-LLM Orchestration',
-        'AI Agents (MCP)',
-        'TensorFlow / Keras',
-        'PyTorch',
-        'BiLSTM & Conv1D',
-        'YOLO (v8/v9/v10/v11)',
-        'Vision Transformers (ViT)',
-        'FAISS',
-        'MiniLM Embeddings',
-        'MMPose & SemGCN'
+        'AWS Bedrock',
+        'Gemini',
+        'Groq'
       ]
     },
-    frontend: {
-      title: 'Frontend',
-      icon: Code,
+    ml: {
+      title: 'Machine Learning',
+      icon: Cpu,
       skills: [
-        'React.js', 'Next.js', 'Angular', 'Vue.js', 'React Native',
-        'TypeScript', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Tailwind CSS'
+        'NLP',
+        'Computer Vision',
+        'TensorFlow',
+        'PyTorch',
+        'OpenMMLab'
       ]
     },
     backend: {
-      title: 'Backend',
-      icon: Database,
-      skills: [
-        'Node.js', '.NET Core / ASP.NET', 'Spring Boot', 'Flask', 'FastAPI', 'Express.js',
-        'REST APIs', 'gRPC', 'JWT Auth', 'Entity Framework'
-      ]
-    },
-    databases: {
-      title: 'Databases',
-      icon: Database,
-      skills: [
-        'PostgreSQL', 'MongoDB', 'SQL Server', 'Firebase', 'Supabase', 'SQLite'
-      ]
-    },
-    cloud: {
-      title: 'Cloud & DevOps',
+      title: 'Backend and Cloud',
       icon: Cloud,
       skills: [
-        'AWS (EC2, S3, Lambda, CloudWatch)',
-        'Azure',
-        'Google Cloud Platform',
+        'Python',
+        'Node.js',
+        'Next.js',
+        'FastAPI',
+        'REST APIs',
+        'PostgreSQL',
+        'AWS',
+        'GCP',
         'Docker',
-        'Kubernetes',
-        'GitHub Actions',
-        'CI/CD Pipelines',
-        'Microservices',
-        'Serverless Architecture'
-      ]
-    },
-    practices: {
-      title: 'Practices',
-      icon: Settings,
-      skills: [
-        'System Design',
-        'Low-Latency Systems',
-        'Agile / TDD',
-        'Git Version Control',
-        'API Documentation',
-        'Code Review',
-        'Technical Leadership',
-        'Deepgram API'
+        'CI/CD'
       ]
     }
   };
@@ -108,7 +101,7 @@ const SkillsSection = () => {
             Technical <span className="text-gradient">Skills</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Full-stack expertise across the modern technology landscape
+            AI engineering skills from RAG and agents to backend and cloud
           </p>
         </motion.div>
 
@@ -180,30 +173,6 @@ const SkillsSection = () => {
               </motion.div>
             );
           })}
-        </motion.div>
-
-        {/* Currently Exploring */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-10 p-6 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl border max-w-4xl mx-auto"
-        >
-          <h3 className="text-lg font-semibold mb-4 text-center">Currently Exploring</h3>
-          <div className="flex flex-wrap justify-center gap-2">
-            {[
-              'MLOps (MLflow, Kubeflow)',
-              'GraphQL',
-              'NX Monorepo',
-              'Elasticsearch',
-              'Apache Superset',
-              'Advanced RAG Patterns'
-            ].map((tech) => (
-              <Badge key={tech} variant="outline" className="border-primary/50 text-primary">
-                {tech}
-              </Badge>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>

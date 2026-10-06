@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Brain, Code, Cloud, Layers, Lightbulb, Users } from 'lucide-react';
+import { Brain, Code, Database, RefreshCw, Bot, Users } from 'lucide-react';
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -26,34 +26,34 @@ const AboutSection = () => {
 
   const philosophyPoints = [
     {
-      icon: Code,
-      title: 'Engineering First',
-      description: 'Started with full-stack (React, Angular, .NET, Python), now designing systems under real constraints—scale, latency, security.',
+      icon: Database,
+      title: 'RAG Systems',
+      description: 'Semantic chunking, hybrid search, query transformation, reranking, and RAGAS evaluation for grounded answers.',
     },
     {
       icon: Brain,
-      title: 'AI with Purpose',
-      description: 'Beyond "calling a model"—I focus on how models reason, how prompts shape behavior, and how context is managed.',
+      title: 'Prompt and Context Engineering',
+      description: 'Client-specific prompts and context design that meet requirement acceptance criteria.',
     },
     {
-      icon: Cloud,
-      title: 'Cloud Native',
-      description: 'Deployed on AWS, Azure, GCP. Built microservices with Docker/Kubernetes, serverless architectures, and CI/CD pipelines.',
+      icon: RefreshCw,
+      title: 'Loop Engineering',
+      description: 'Agent loops that plan, act, evaluate, and refine until the task is done right.',
     },
     {
-      icon: Layers,
-      title: 'Systems Thinking',
-      description: 'From 3D pose estimation research to production RAG chatbots—every solution considers reliability, validation, and real-world usability.',
+      icon: Bot,
+      title: 'Agentic AI',
+      description: 'Multi-step workflows chaining LLM calls, tool use, and conditional routing, built with LangGraph.',
+    },
+    {
+      icon: Code,
+      title: 'AI-Assisted Development',
+      description: 'Automating traditional coding practices with AI to raise team productivity.',
     },
     {
       icon: Users,
-      title: 'Collaborative Leader',
-      description: 'Led teams, mentored developers, and explained complex technical ideas to non-technical stakeholders.',
-    },
-    {
-      icon: Lightbulb,
-      title: 'Continuous Learner',
-      description: 'Experimenting with prompt engineering, multi-LLM orchestration, and reducing hallucinations in production systems.',
+      title: 'Technical Leadership',
+      description: 'Led a 5-member team and mentored 5 interns, improving team productivity by 20%.',
     },
   ];
 
@@ -82,29 +82,19 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I'm a <span className="text-foreground font-semibold">junior-level Full-Stack & AI Engineer with 2+ years of hands-on experience</span> who
-                  enjoys building systems end to end — from clean, thoughtful user interfaces, all the way down to
-                  <span className="text-secondary font-medium"> scalable backend services</span> and
-                  <span className="text-accent font-medium"> intelligent, AI-driven decision layers</span>.
-                  My work lives at the intersection of software engineering, cloud platforms, machine learning, and applied AI.
+                  I'm an <span className="text-foreground font-semibold">AI Developer with 1.5+ years of experience</span> designing and delivering LLM applications. I've built <span className="text-primary font-semibold">25+ applications and client solutions</span> and deployed AI assistants for <span className="text-primary font-semibold">50+ clients</span>.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I didn't arrive at AI by chasing trends — I came here through engineering. I started by building full-stack applications
-                  with <strong className="text-foreground">React, Angular, .NET, and Python</strong>, deploying systems on AWS, Azure, and GCP.
-                  Over time, I became most interested in understanding <strong className="text-foreground">how systems behave under real constraints</strong>:
-                  scale, latency, security, and maintainability.
+                  I came to AI through engineering. I started with full-stack development, and that foundation shapes how I build AI today: with attention to <strong className="text-foreground">latency, reliability, and maintainability</strong>, not just model output.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  For my thesis, I built a <strong className="text-foreground">3D pose estimation system for fatigue detection</strong> using
-                  smartphone-based motion data — achieving <span className="text-primary font-semibold">93% accuracy</span> with a practical,
-                  low-cost approach using MMPose HRNet, SemGCN, and BiLSTM.
+                  At <strong className="text-foreground">Tekworks</strong>, I build client-facing AI agents, write prompts to client requirements, design multi-step workflows, and automate traditional coding practices with AI to boost team productivity.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  Today I actively experiment with <strong className="text-foreground">prompt engineering, Retrieval-Augmented Generation,
-                  and multi-LLM orchestration</strong> — focusing on reliability, explainability, and reducing hallucinations in production systems.
+                  My focus areas are <strong className="text-foreground">Retrieval-Augmented Generation (RAG), prompt, context, and loop engineering, and agentic AI</strong>. For my bachelor's thesis, I built a 3D pose estimation system for fatigue detection that reached <span className="text-primary font-semibold">93% accuracy</span>.
                 </p>
               </div>
 
@@ -151,7 +141,7 @@ const AboutSection = () => {
             className="text-center p-8 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 rounded-2xl border"
           >
             <blockquote className="text-xl md:text-2xl font-medium text-foreground italic">
-              "If you explore my work, you won't just see finished code—you'll see experiments, trade-offs, and learning in progress."
+              "If you explore my work, you won't just see finished code, you'll see experiments, trade-offs, and learning in progress."
             </blockquote>
             <p className="text-muted-foreground mt-4">That's how I grow as an engineer.</p>
           </motion.div>

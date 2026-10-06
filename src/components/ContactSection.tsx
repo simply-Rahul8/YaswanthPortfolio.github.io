@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, MapPin, Linkedin, Github, Send, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, Send, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -10,15 +10,15 @@ const ContactSection = () => {
   const emailAddress = 'yashwanthrahul5126@gmail.com';
   const emailUrl = `mailto:${emailAddress}`;
   const linkedInUrl = 'https://www.linkedin.com/in/yaswanthrahul/';
-  const whatsAppUrl = 'https://wa.me/917569687249';
+  const phoneUrl = 'tel:+917569687249';
   const githubUrl = 'https://github.com/simply-Rahul8';
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: emailAddress, href: emailUrl, external: false },
-    { icon: MapPin, label: 'Location', value: 'Hyderabad, Telangana', href: '#', external: false },
-    { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/yaswanthrahul', href: linkedInUrl, external: true },
-    { icon: Github, label: 'GitHub', value: 'github.com/simply-Rahul8', href: githubUrl, external: true },
-    { icon: MessageCircle, label: 'WhatsApp', value: '+91 75696 87249', href: whatsAppUrl, external: true },
+    { icon: MapPin, label: 'Location', value: 'Hyderabad, India', href: '#', external: false },
+    { icon: Linkedin, label: 'LinkedIn', value: 'https://linkedin.com/in/yaswanthrahul', href: linkedInUrl, external: true },
+    { icon: Github, label: 'GitHub', value: 'https://github.com/simply-Rahul8', href: githubUrl, external: true },
+    { icon: Phone, label: 'Phone', value: '+91 7569687249', href: phoneUrl, external: false },
   ];
 
   return (
@@ -34,7 +34,7 @@ const ContactSection = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Open to opportunities in Sweden and ready to build something amazing
+            Open to remote and hybrid AI Developer roles
           </p>
         </motion.div>
 
@@ -76,8 +76,7 @@ const ContactSection = () => {
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold mb-3">Ready to Build Something Amazing?</h3>
                 <p className="text-muted-foreground mb-6 text-sm max-w-lg mx-auto">
-                  With 3+ years of experience in full-stack development and AI engineering, 
-                  I'm ready to contribute to your team's success.
+                  With 1.5+ years in AI development, I build AI agents, RAG systems, and agentic workflows that deliver for clients.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   <Button size="lg" asChild>
