@@ -18,15 +18,15 @@ const ExperienceSection = () => {
       duration: '',
       isCurrent: true,
       achievements: [
-        'Build client AI agents with system prompts, tool definitions, and agent loops that plan, act, evaluate, and refine',
-        'Design multi-step agentic workflows chaining LLM calls, tool use, and conditional routing to replace manual processes',
-        'Engineer client-specific prompts with prompt and context engineering to meet requirement acceptance criteria',
-        'Improve team productivity by automating traditional coding practices with AI-assisted development workflows'
+        'Shipped 12 pull requests and 11 features across 3 products in the first three months',
+        'Learning platform: implemented GraphRAG, a MATH engine, an admin panel, and a Jira integration',
+        'AI-assisted coding-practice platform (5 languages): built a flash-test module and tuned prompts to be token-efficient',
+        'Client-facing web application: implemented soft and hard delete, export and import flows, and view-only access enforced at every layer; fixed a cloning race condition; gave 4 client demos'
       ],
-      technologies: ['AI Agents', 'Prompt Engineering', 'Agentic Workflows', 'LLMs', 'Python']
+      technologies: ['GraphRAG', 'Prompt Engineering', 'LLMs', 'RAG']
     },
     {
-      title: 'Full Stack and AI Developer',
+      title: 'AI Developer',
       company: 'Gaddr',
       location: 'Remote, Sweden',
       period: 'Mar 2025 - Apr 2026',

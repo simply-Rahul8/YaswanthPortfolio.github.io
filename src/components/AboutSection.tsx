@@ -90,7 +90,7 @@ const AboutSection = () => {
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  At <strong className="text-foreground">Tekworks</strong>, I build client-facing AI agents, write prompts to client requirements, design multi-step workflows, and automate traditional coding practices with AI to boost team productivity.
+                  At <strong className="text-foreground">Tekworks</strong>, I work across three products. In my first three months I shipped <span className="text-primary font-semibold">12 pull requests and 11 features</span>, including GraphRAG, a MATH engine, a Jira integration, token-efficient prompt tuning, and role-based access.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
