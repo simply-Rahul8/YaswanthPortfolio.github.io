@@ -43,7 +43,7 @@ const HeroSection = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
-                Open to Work · Hyderabad, India · Remote · Hybrid
+                Open to Work · Hyderabad, India · Immediate Joiner
               </span>
             </motion.div>
             <motion.p
@@ -66,14 +66,14 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-lg font-medium text-foreground/80 mb-4"
             >
-              AI Developer · RAG Systems · Prompt, Context and Loop Engineering · Agentic AI
+              AI & Automation Developer · LLM Agents · RAG Systems · Workflow Automation
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-muted-foreground max-w-md leading-relaxed mb-8"
             >
-              I build AI agents, RAG systems, and multi-step agentic workflows that turn client requirements into reliable, production-ready solutions.
+              I build AI agents, RAG systems, and automation pipelines in Python that turn client requirements into reliable, production-ready solutions.
             </motion.p>
 
             <motion.div variants={itemVariants}>

@@ -20,7 +20,7 @@ const CoreCompetenciesSection = () => {
     {
       icon: Bot,
       title: 'Agentic AI',
-      description: 'AI agents, multi-step agentic workflows, multi-agent systems, stateful task routing, MCP.',
+      description: 'AI agents, multi-step agentic workflows, AI workflow automation, multi-agent systems, stateful task routing, MCP.',
     },
     {
       icon: Brain,
@@ -35,7 +35,7 @@ const CoreCompetenciesSection = () => {
     {
       icon: Cloud,
       title: 'Backend and Cloud',
-      description: 'Python, Node.js, Next.js, FastAPI, REST APIs, PostgreSQL, AWS, GCP, Docker, CI/CD.',
+      description: 'Python, Node.js, Next.js, FastAPI, REST APIs, PostgreSQL, AWS, Azure, GCP, Docker, Kubernetes, CI/CD.',
     },
   ];
 
@@ -91,7 +91,7 @@ const CoreCompetenciesSection = () => {
           <div className="inline-flex flex-wrap justify-center gap-3 p-6 bg-muted/50 rounded-2xl border">
             <span className="text-muted-foreground text-sm">Seeking roles in:</span>
             <span className="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              AI Developer
+              AI & Automation Developer
             </span>
             <span className="px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
               AI Engineer

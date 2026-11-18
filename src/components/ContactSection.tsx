@@ -34,7 +34,7 @@ const ContactSection = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Open to remote and hybrid AI Developer roles
+            Open to AI & Automation Developer roles in Hyderabad, remote or hybrid. Immediate joiner.
           </p>
         </motion.div>
 

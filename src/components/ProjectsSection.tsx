@@ -32,6 +32,24 @@ const ProjectsSection = () => {
       demoUrl: 'https://shl-recommender-agent-production.up.railway.app/'
     },
     {
+      title: 'Script-to-Short Automation Pipeline',
+      description: 'Automation pipeline that turns a rough script into a 1-minute vertical video with a 2D character (lip-sync, captions, sound design) and publishes it to YouTube Shorts and Instagram Reels through their official APIs. Runs locally as Claude Code skills.',
+      category: 'Automation',
+      icon: Brain,
+      highlights: ['End-to-end automation', 'Auto-publishing'],
+      technologies: ['Python', 'Claude Code', 'YouTube API', 'Instagram API'],
+      githubUrl: 'https://github.com/simply-Rahul8/MTP-clone-YT-Automation-pipeline'
+    },
+    {
+      title: 'youtube-summary (Claude Code Skill)',
+      description: 'Open-source skill that turns a YouTube video or recording into a detailed PDF summary using captions or local Whisper. Filters Whisper hallucinations and passed 17 of 17 automated checks.',
+      category: 'Automation',
+      icon: Brain,
+      highlights: ['Open source (MIT)', '17/17 checks'],
+      technologies: ['Python', 'Whisper', 'Claude Code'],
+      githubUrl: 'https://github.com/simply-Rahul8/youtube-summary'
+    },
+    {
       title: '3D Pose Estimation and Fatigue Detection',
       problem: 'Detecting physical fatigue in real time from human body movement.',
       solution: '3D pose pipeline using HRNet keypoints, SemGCN spatial and BiLSTM temporal modeling.',
@@ -52,15 +70,6 @@ const ProjectsSection = () => {
       highlights: ['<500ms latency', 'Hybrid AI'],
       technologies: ['Python', 'LLM APIs', 'Rule Engine', 'REST APIs'],
       githubUrl: 'https://github.com/simply-Rahul8/Customer-Feedback-Analysis-Tool'
-    },
-    {
-      title: 'Personal Data RAG Chatbot',
-      description: 'Privacy-first chatbot with local RAG using Streamlit, Ollama, LangChain and FAISS local vector store.',
-      category: 'AI/LLM',
-      icon: Brain,
-      highlights: ['Privacy-first', 'Local LLM', 'FAISS'],
-      technologies: ['Python', 'LangChain', 'Ollama', 'FAISS', 'Streamlit'],
-      githubUrl: 'https://github.com/simply-Rahul8/Personal-chatbot'
     }
   ];
 
@@ -83,7 +92,7 @@ const ProjectsSection = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            RAG systems, agentic AI, and applied machine learning
+            RAG systems, AI automation, and applied machine learning
           </p>
         </motion.div>
 

@@ -26,7 +26,7 @@ const Navigation = () => {
             </span>
           </a>
           <p className="text-sm mt-4 tracking-wide" style={{ color: 'hsl(var(--sidebar-muted))' }}>
-            AI Developer
+            AI & Automation Developer
           </p>
         </div>
 

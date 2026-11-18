@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <span className="text-2xl font-bold heading-display text-foreground">RY.</span>
             <div className="text-sm text-muted-foreground">
-              <p>AI Developer</p>
+              <p>AI & Automation Developer</p>
               <p>📍 Hyderabad, India</p>
             </div>
           </div>

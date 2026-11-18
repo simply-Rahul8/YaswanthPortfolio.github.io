@@ -94,6 +94,10 @@ const AboutSection = () => {
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
+                  Outside work I build automation end to end: a <strong className="text-foreground">script-to-video pipeline</strong> that publishes to YouTube Shorts and Instagram Reels through their official APIs, and an open-source <strong className="text-foreground">Claude Code skill</strong> that turns videos into PDF summaries. I'm based in Hyderabad and available to join immediately.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   My focus areas are <strong className="text-foreground">Retrieval-Augmented Generation (RAG), prompt, context, and loop engineering, and agentic AI</strong>. For my bachelor's thesis, I built a 3D pose estimation system for fatigue detection that reached <span className="text-primary font-semibold">93% accuracy</span>.
                 </p>
               </div>

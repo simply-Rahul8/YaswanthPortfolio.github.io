@@ -42,6 +42,8 @@ const SkillsSection = () => {
         'Multi-Step Agentic Workflows',
         'Multi-Agent Systems',
         'Stateful Task Routing',
+        'AI Workflow Automation',
+        'YouTube and Instagram API Automation',
         'MCP'
       ]
     },
@@ -79,8 +81,11 @@ const SkillsSection = () => {
         'REST APIs',
         'PostgreSQL',
         'AWS',
+        'Azure',
         'GCP',
         'Docker',
+        'Kubernetes',
+        'Pydantic',
         'CI/CD'
       ]
     }
